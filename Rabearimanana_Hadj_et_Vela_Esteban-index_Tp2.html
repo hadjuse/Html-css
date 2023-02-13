@@ -7,8 +7,9 @@
     <body>
         <form action="page1.php" method="post">
             <fieldset>
+                
+                <legend>Your information</legend><br>
                 <div class="essential_information">
-                <legend>Your information</legend>
                 <label for="fname">Prénom:</label>
                 <input type="text" id="fname" name="fname" maxlength="50"><br><br>
                 <label for="lname">Nom:</label>
@@ -16,7 +17,7 @@
                 <label for="email">email:</label>
                 <input type="email" name="email"><br><br>
                 <label for="email1">email1:</label>
-                <input type="email1" name="email1"><br><br>
+                <input type="email" name="email1"><br><br>
                 <label for="age">age:</label>
                 <input type="number" name="age" id="age" min="18" max="125" step="1" value="18"><br><br>
                 <p>sexe:
@@ -31,7 +32,24 @@
                 </p>
                 </div>
                 <div class="hobby_etc">
-                    <p>select your loisirs</p>
+                    <p>select your loisirs:</p>
+                    <select name="loisirs" size="3" multiple="multiple">
+                        <option value="sport">sport</option>
+                        <option value="lecture">lecture</option>
+                        <option value="photographie">photographie</option>
+                    </select>
+                    <p>Taille des chemises:</p>
+                    <input type="radio" name="Taille" value="Small">Small
+                    <input type="radio" name="Taille" value="Medium">Medium
+                    <input type="radio" name="Taille" value="Large">Large <br> <br>
+                    <label for="phone">Tel:</label>
+                    <input type="tel" name="phone" pattern="07[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}"  maxlength="10" required><br><br>
+                    <label for="color">color:</label>
+                    <input type="color" name="color">
+                    <p>commentaires:</p>
+                    <textarea name="commentaires" id="commentaires" cols="30" rows="10">Enter your comments</textarea><br>
+                    <input type="submit" name="submit" id="submit">
+                    <input type="reset" name="reset" id="reset">
                 </div>
             </fieldset>
         </form>
