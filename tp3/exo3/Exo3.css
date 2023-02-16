@@ -1,0 +1,9 @@
+li.chiffresromains
+{
+    list-style-type: upper-roman;
+}
+
+li.majuscules
+{
+    list-style-type: upper-latin;
+}
