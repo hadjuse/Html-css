@@ -1,0 +1,27 @@
+caption
+{
+    font-style: italic;
+    font-size: 32px;
+}
+
+td
+{
+    background-color: yellow;
+}
+
+td.lignes
+{
+    font-style: italic;
+    font-size: 32px;
+}
+
+td.gras
+{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+td.cellulesfusionnées
+{
+    background-color: red;
+}
