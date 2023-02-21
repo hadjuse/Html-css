@@ -1,0 +1,41 @@
+1. body{color: red} 
+	Modifie le texte affiché du body, changeant la couleur de :
+					<p id="id1">Div 1 Paragraphe 1</p>
+					<p>Div id="div1" Paragraphe 2</p>
+					<p>Div id="div1" Paragraphe 3</p>
+
+2. div#div1> p{color:red}
+	Modifie les éléments <p> dans un div avec l'id "div1", changeant la couleur de:
+					<p>Div id="div1" Paragraphe 2</p>
+					<p>Div id="div1" Paragraphe 3</p>
+
+3. div#div1> a{color:red}
+	Modifie les éléments <a> dans un div avec l'id "div1", changeant la couleur de:
+					<a href="pag1.html" > click here </a>
+
+4. div>a{color:red}
+	Modifie les éléments <a> contenus dans un div, changeant la couleur de:
+					<a href="pag1.html" > click here </a>
+
+5. [type]{color:red}
+	Modifie les éléments avec un attribut "type", changeant la couleur de:
+					<input type="text" name="fname">
+					<input type="text" name="fname">
+					<input type="text" name="fname">
+					<input type="email" name="email">
+					<button type="submit">Click me</button>
+
+6. form.form1{background-color:red}
+	Modifie les éléments form, ayant la classe "form1", ici il n'y a pas d'élément ayant cette classe.
+
+7. form>input:nth-child(2n) {background-color:red}
+	Modifie les éléments input dans un form, mais seulement un sur deux.
+	C'est à dire les éléments pairs (2n), changeant la couleur de:
+					<input type="text" name="fname">
+					<input type="email" name="email">
+
+8. input:nth-child(2n+1) {background-color:red}
+	Modifie les éléments input dans un form, mais seulement un sur deux en partant du deuxième.
+	C'est à dire les éléments impairs (2n+1), changeant la couleur de:
+					<input type="text" name="fname">
+					<input type="text" name="fname">
