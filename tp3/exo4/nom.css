@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(197, 196, 196);
+    background: rgb(255, 254, 0254);
 }
 fieldset{
     background-color: rgb(238, 235, 235);
@@ -14,6 +14,7 @@ legend{
     border-radius: 10px 10px 10px 10px;
     border: 4px solid grey;
     background-color: grey;
+    
     color: white;
     text-align: left;
     padding: 20px;
@@ -41,6 +42,7 @@ input[type=submit]{
     margin-left: 72px;
     width: 145%;
     height: 100%;
+    cursor: pointer;
 }
 input[type=text]{
     width: 150%;
