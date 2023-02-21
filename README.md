@@ -5,8 +5,7 @@
 # Visualisation des sites
 Il y a plusieurs possibilité mais le mieux est de faire un git clone puis d'utiliser l'extension
 
-Live server dans le visual studio code.
-# 14/02/2023
-1) Ajout du TP2
-2) Ajout exo 1 TD3
+Live server dans l'éditeur visual studio code afin de visualiser les sites
+
+
 
