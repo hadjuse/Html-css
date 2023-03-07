@@ -15,8 +15,7 @@
         {
             var element = prompt("Saisissez un élement que vous voulez insérer.");
             tab.push(element);
-        }
-        tab.sort(); 
+        } 
         var unique = tab.filter((x, i) => tab.indexOf(x) === i);
         var histogramme=new Array(unique.length);
         for (i=0 ;i<unique.length; i++) histogramme[i] = 0;
