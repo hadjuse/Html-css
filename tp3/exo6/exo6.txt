@@ -1,0 +1,21 @@
+////////////////1. p > h4{color:red}
+ 
+2. div.divs > p.pars{color:red}
+
+3. abbr[title]{color:red}
+
+4. [width="300"]{color:red}
+
+5. nav.nav1>a[href]{color:red}
+
+6. div.divs > p{color:red}
+
+7. p#id1 > img.images{color:red}
+
+8. img:nth-child(2n+1){color:red}
+
+9. img[src$=".jpg"]{color:red}
+
+10. div.div1 + div.div2{color:red}
+
+/////////11. table > *:nth-child(2n){color:red}

@@ -1,0 +1,25 @@
+table
+{
+    background-color: lightblue;
+}
+
+select
+{
+    background-color: red;
+}
+
+input.zonedetexte
+{
+    background-color: red;
+}
+
+button:focus
+{
+    font-size: 32px;
+}
+
+th
+{
+    font-weight: bold;
+    font-size: 32px;
+}
