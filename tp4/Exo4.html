@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo4</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Rectangular_prism(nom, L, W, H)
+        {
+            this.nom=nom;
+            this.L=L;
+            this.W=W;
+            this.H=H;
+        }
+        Rectangular_prism.prototype.volume = function()
+        {
+            return this.L * this.W * this.H;
+        };
+        const rectangular_prism = new Rectangular_prism('A',5,10,20);
+        document.write(rectangular_prism.volume());
+        function objsize(obj)
+        {
+            return Object.keys(obj).length;
+        }
+    </script>
+</body>
+</html>
