@@ -8,7 +8,26 @@
 </head>
 <body>
     <script type="text/javascript">
-        
+        var nb_element = prompt("Donnez le nb d'élement du tableau");
+        parseInt(nb_element);
+        var tab = [];
+        for (i=0; i<nb_element; i++)
+        {
+            var element = prompt("Saisissez un élement que vous voulez insérer.");
+            tab.push(element);
+        }
+        tab.sort(); 
+        var unique = tab.filter((x, i) => tab.indexOf(x) === i);
+        var histogramme=new Array(unique.length);
+        for (i=0 ;i<unique.length; i++) histogramme[i] = 0;
+        for (i=0;i<unique.length;i++)
+        {
+            for (j=0;j<tab.length;j++)
+            {
+                if (tab[j] == unique[i]) histogramme[i]+=1;
+            }
+        }
+        document.writeln("l'élément le plus fréquent est "+unique[histogramme.indexOf(Math.max(...histogramme))]+" "+"avec une fréquence de: " +Math.max(...histogramme));       
     </script>
 </body>
 </html>
