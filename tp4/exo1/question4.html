@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>question4</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var nb_note = parseInt(
+        prompt("Entrez le nombre de notes que vous voulez saisir: ")
+      );
+      var tab = [];
+      for (let i = 0; i < nb_note; i++)
+        tab.push(parseInt(prompt("Saisissez une note: ")));
+
+      moyenne = 0; 
+      for (let i = 0; i < nb_note; i++) moyenne += parseInt(tab[i]);
+      alert(parseFloat(moyenne/nb_note));
+    </script>
+  </body>
+</html>

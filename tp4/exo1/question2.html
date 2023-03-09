@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>question2</title>
+  </head>
+  <body>
+    <script text="text/javascript">
+      function multiplication(a, b) {
+        let somme = a;
+        parseInt(somme);
+        for (let i = 0; i < b-1; i++) {
+          somme += a;
+        }
+        return somme;
+      }
+      function division_successive(n, d) {
+        var q = 0;
+        var r;
+        r = n;
+
+        while (r >= d) {
+          q += 1;
+          r = r - d;
+        }
+        return q;
+      }
+      function exposant(a,b) {
+        var produit = a;
+        for (let i = 0; i < b-1; i++) {
+          produit *=a;
+        }
+        return produit;
+      }
+      var a = prompt("Première valeur");
+      var b = prompt("Deuxième valeur");
+      alert(multiplication(parseInt(a), parseInt(b)));
+      alert(division_successive(parseInt(a), parseInt(b)));
+      alert(exposant(parseInt(a), parseInt(b)));
+    </script>
+  </body>
+</html>
