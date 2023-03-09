@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<body> 
+		<script type="text/javascript">
+			/* FONCTION PALINDROME DETAILLE :
+			function palindrome(mot){
+				if (mot.split("").reverse().join("") == mot){
+					alert(mot + " est un palindrome.");
+				}else {
+					alert(mot + " n'est pas un palindrome.");
+				}
+			}
+			*/
+	function palindrome(mot){alert(mot + ((mot.split("").reverse().join("") == mot) ? " est un palindrome." : " n'est pas un palindrome."));}
+
+	function tri(mot){return mot.split("").sort().join("");}
+
+	function court(phrase){
+		var min=0;
+		phrase=phrase.split(" ");
+		for (i=0;i<phrase.length;i++){
+			if (phrase[i].length<phrase[min].length){
+				min=i;
+			}
+		}
+		return (phrase[min]+" position:"+(min+1));
+	}
+
+	function scase(phrase){
+		var out='';
+		for (i=0;i<phrase.length;i++){
+			(phrase[i]==phrase[i].toUpperCase()) ? out+=phrase[i].toLowerCase() : out+=phrase[i].toUpperCase();}
+		return out;
+	}
+
+	palindrome(prompt("Entrez un mot : "));
+	alert(tri(prompt("Entrez un mot : ")));
+	alert(court(prompt("Entrez une phrase")));
+	alert(scase(prompt("Veuillez entrez une phrase : ")));
+</script> 
+	</body>
+</html>
