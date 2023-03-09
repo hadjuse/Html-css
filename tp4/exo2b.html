@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>exo2</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var nb_element = prompt("Donnez le nb d'élement du tableau");
+      parseInt(nb_element);
+      var tab = [];
+      for (i = 0; i < nb_element; i++) {
+        var element = prompt("Saisissez un élement que vous voulez insérer.");
+        tab.push(element);
+      }
+
+      function dernier(tab, n) {
+        var tab2 = tab.slice(tab.length - n, tab.length);
+        alert(tab2);
+      }
+      var nb = prompt("Occurence du sous tableau à afficher ");
+
+      dernier(tab, nb);
+    </script>
+     
+  </body>
+</html>
