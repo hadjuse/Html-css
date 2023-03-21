@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1 Question 2</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function freqvoyelles(chaines)
+        {
+            var freq= new Array();
+            freq['a']=0;
+            freq['e']=0;
+            freq['i']=0;
+            freq['o']=0;
+            freq['u']=0;
+            freq['y']=0;
+            chaines = chaines.toLowerCase();
+            for(var i=0;i<chaines.length;i++)
+            {
+                if(chaines[i]=='a'||chaines[i]=='e'||chaines[i]=='i'||chaines[i]=='o'||chaines[i]=='u'||chaines[i]=='y')
+                {
+                    freq[chaines[i]]++;
+                }
+            }
+            return freq;
+        }
+
+        var voyelles = freqvoyelles("AAEEee iiIIAA YY uY Naya");
+        for (var lettr in voyelles )
+        {
+            var value = voyelles [lettr];
+            document.write(lettr + " = " + value + '<br>');
+        }
+        
+    </script>
+</body>
+</html>
