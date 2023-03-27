@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo2 TP5</title>
+</head>
+
+<body>
+    <form enctype="multipart/form-data" method="post">
+        <table border="2">
+            <tr>
+                <td bgcolor="lightyellow"><label for="nombre1">Number 1</label><input type="text" id="nombre1" name="nombre1"/></td>
+                <td bgcolor="lightyellow"><label for="nombre2">Number 2</label><input type="text" id="nombre2" name="nombre2"/></td>
+            </tr>
+            <tr>
+                <td bgcolor="lightyellow"><input type="radio" id="PGCD" name="PGCD"/><label for="PGCD">PGCD</label></td>
+                <td bgcolor="lightyellow"><input type="radio" id="PPCM" name="PPCM"/><label for="PPCM">PPCM</label></td>
+            </tr>
+            <tr>
+                <td bgcolor="lightyellow"><button type="button" id="hide">hide</button></td>
+                <td bgcolor="lightyellow"><button type="button" id="show">show</button></td>
+            </tr>
+        </table>
+    </form>
+    <script type="text/javascript">
+        function hideInputs()
+        {
+            var inputs = document.getElementsByTagName("input");
+            for(var i=0;i<inputs.length;i++)
+            {
+                inputs[i].style.visibility="hidden";
+            }
+        }
+        document.getElementById("hide").addEventListener("click",hideInputs);
+        
+        function showInputs() 
+        {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) 
+            {
+                inputs[i].style.visibility = "visible";
+            }
+        }
+        document.getElementById("show").addEventListener("click", showInputs);
+    </script>
+</body>
+</html>
