@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset=utf-8 /> 
+        <title>Create a table</title> 
+        <style type="text/css">
+            table {
+                background-color: rgb(150, 193, 250);
+            }           
+        </style>
+        <script>
+            function addRow() {
+                var table = document.getElementById("myTable");
+                var rowCount = table.rows.length;
+                var row = table.insertRow(rowCount);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                cell1.innerHTML = "<td>PreNom" + rowCount + ": <input type='text'></td>";
+                cell2.innerHTML = "<td>Nom" + rowCount + ": <input type='text'></td>";
+            }
+
+
+            function deleteRow() {
+                var table = document.getElementById("myTable");
+                if (table.rows.length > 1) {
+                    table.deleteRow(-1);
+                }
+            }
+
+            function deleteAll() {
+                var body = document.getElementsByTagName("body")[0];
+                body.innerHTML = "";
+            }
+
+            function addRows() {
+                var table = document.getElementById("myTable");
+                var rowCount = table.rows.length;
+                var n = prompt("Combien de lignes voulez-vous ajouter?");
+                
+                for (var i = 0; i < n; i++) {
+                    var row = table.insertRow(rowCount+i);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    cell1.innerHTML = "<td>PreNom" + (rowCount+i) + ": <input type='text'></td>";
+                    cell2.innerHTML = "<td>Nom" + (rowCount+i) + ": <input type='text'></td>";
+                }
+            }
+
+
+        </script>
+</head>
+<body>
+    <form id="form1">
+        <table id="myTable" border="2">
+            <tr>
+            <td>PreNom: <input type="text"></td> 
+            <td>Nom : <input type="text"></td>
+        </table>
+
+        <input type="button" onclick="addRow()" value="Add Row">
+        <input type="button" onclick="deleteRow()" value="delete row"> 
+        <input type="button" onclick="deleteAll()" value="delete all"> 
+        <input type="button" onclick="addRows()" value="Add rows">
+    </form>
+</body>
+</html>
