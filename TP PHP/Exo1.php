@@ -72,7 +72,7 @@
         echo min_maj("wELCome mUssAB ZneIKA");
     ?>
     
-        <?php
+    <?php
         function m_p_long($str1)
         {
             $mots = preg_split('/\s+/', $str1);
