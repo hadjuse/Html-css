@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo2</title>
+</head>
+<body>
+    <form action="exo2.php" method="POST">
+        <label for="name">NOM: </label>
+        <input type="text" name="nom" id="nom" required/><br>
+        <label for="prenom">PRENOM: </label>
+        <input type="text" name="prenom" id="prenom" required/><br>
+        <p>Sex:</p>
+        <input type="radio" name="sexe" id="male" value="male"/>Male <br>
+        <input type="radio" name="sexe" id="female" value="female"/>Female <br> <br>
+        Select class
+        <select name="class" id="class" required>
+            <option value="">--Veuillez choisir une option--</option>
+            <option value="Web">Web</option>
+            <option value="XML">XML</option>
+            <option value="Java">Java</option>
+            <option value="UNIX">UNIX</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

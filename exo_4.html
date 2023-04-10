@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exo4</title>
+    <script type="text/javascript">
+      function addRow() {
+        var new_table = document.getElementById("myTable");
+        var rowCount = new_table.rows.length;
+
+      }
+    </script>
+  </head>
+  <body>
+    <form id="form1">
+      <table id="myTable" border="2">
+        <tr>
+          <td>PreNom1: <input type="text" /></td>
+          <td>Nom1: <input type="text" /></td>
+        </tr>
+      </table>
+
+      <input type="button" onclick="addRow()" value="Add Row" />
+      <input type="button" onclick="deleteRow()" value="delete row" />
+      <input type="button" onclick="deleteAll()" value="delete all" />
+      <input type="button" onclick="addRows()" value="Add rows" />
+    </form>
+  </body>
+</html>
