@@ -46,5 +46,30 @@
     }
     toto(7,14);
     ?>
+    
+    <?php
+        function min_maj($str1)
+        {
+            $result = "";
+            for ($i = 0; $i < strlen($str1); $i++)
+            {
+                $char = $str1[$i];
+                if (ctype_upper($char))
+                {
+                    $result .=strtolower($char);
+                }
+                else if (ctype_lower($char))
+                {
+                    $result .=strtoupper($char);
+                }
+                else
+                {
+                    $result .= $char;
+                }
+            }
+            return $result;
+        }
+        echo min_maj("wELCome mUssAB ZneIKA");
+    ?>    
 </body>
 </html>
