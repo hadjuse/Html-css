@@ -70,6 +70,25 @@
             return $result;
         }
         echo min_maj("wELCome mUssAB ZneIKA");
-    ?>    
+    ?>
+    
+        <?php
+        function m_p_long($str1)
+        {
+            $mots = preg_split('/\s+/', $str1);
+            $longueur = 0;
+            $position = 0;
+            foreach ($mots as $key => $mot)
+            {
+                if (strlen($mot) > $longueur)
+                {
+                    $longueur = strlen($mot);
+                    $position = $key;
+                }
+            }
+            return "Le mot le plus long est '".$mots[$position]."' et sa position est ".$position;
+        }
+        echo m_p_long("Mon premier cours commence aujourd'hui");
+    ?> 
 </body>
 </html>
