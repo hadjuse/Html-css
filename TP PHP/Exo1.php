@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo1</title>
+</head>
+<body>
+<?php
+    function toto($L, $C)
+    {
+        $L = floor($L/2) * 2;
+        $C = floor($C / 2) * 2;
+        for ($i = 0; $i < $C; $i++)
+        {
+            echo "X";
+        }
+        echo "\n";
+        for($i = 0; $i < $L ; $i++)
+        {
+            if ($i % 2 == 0)
+            {
+                echo "X";
+                for ($j = 1; $j < $C - 1; $j++)
+                {
+                    echo " ";
+                }
+                echo "X\n";
+            }
+            else
+            {
+                echo "X";
+                for ($j = 1; $j < $C - 1; $j++)
+                {
+                    echo "X";
+                }
+                echo "X\n";
+            }
+        }
+        for ($i = 0; $i < $C; $i++)
+        {
+            echo " ";
+        }
+        echo "\n";
+    }
+    toto(7,14);
+    ?>
+</body>
+</html>
