@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exo1</title>
+    <title>Exo 1</title>
 </head>
 <body>
     <?php
@@ -49,49 +49,49 @@
     }
     toto(7,14);
     ?>
-    
+
     <?php
-        function min_maj($str1)
-        {
-            $result = "";
-            for ($i = 0; $i < strlen($str1); $i++)
+            function min_maj($str1)
             {
-                $char = $str1[$i];
-                if (ctype_upper($char))
+                $result = "";
+                for ($i = 0; $i < strlen($str1); $i++)
                 {
-                    $result .=strtolower($char);
+                    $char = $str1[$i];
+                    if (ctype_upper($char))
+                    {
+                        $result .=strtolower($char);
+                    }
+                    else if (ctype_lower($char))
+                    {
+                        $result .=strtoupper($char);
+                    }
+                    else
+                    {
+                        $result .= $char;
+                    }
                 }
-                else if (ctype_lower($char))
-                {
-                    $result .=strtoupper($char);
-                }
-                else
-                {
-                    $result .= $char;
-                }
+                return $result;
             }
-            return $result;
-        }
-        echo min_maj("wELCome mUssAB ZneIKA");
+            echo min_maj("wELCome mUssAB ZneIKA");
     ?>
-    
+    <br>
     <?php
-        function m_p_long($str1)
+    function m_p_long($str1)
+    {
+        $mots = preg_split(' /\s+/', $str1);
+        $longueur = 0;
+        $position = 0;
+        foreach ($mots as $key => $mot)
         {
-            $mots = preg_split('/\s+/', $str1);
-            $longueur = 0;
-            $position = 0;
-            foreach ($mots as $key => $mot)
+            if (strlen($mot) > $longueur)
             {
-                if (strlen($mot) > $longueur)
-                {
-                    $longueur = strlen($mot);
-                    $position = $key;
-                }
+                $longueur = strlen($mot);
+                $position = $key;
             }
-            return "Le mot le plus long est '".$mots[$position]."' et sa position est ".$position;
         }
-        echo m_p_long("Mon premier cours commence aujourd'hui");
-    ?> 
+        return "Le mot le plus long est '".$mots[$position]."' et sa position est ".$position;
+    }
+    echo m_p_long("Mon premier cours commence aujourd'hui");
+    ?>
 </body>
 </html>
