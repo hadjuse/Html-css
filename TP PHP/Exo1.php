@@ -45,7 +45,7 @@
             echo "<td> </td>";
 
         }
-        echo "</tr>";
+        echo "</tr></table>";
     }
     toto(7,14);
     ?>
