@@ -7,42 +7,45 @@
     <title>Exo1</title>
 </head>
 <body>
-<?php
+    <?php
     function toto($L, $C)
-    {
+    { echo "<table><tr>";
         $L = floor($L/2) * 2;
         $C = floor($C / 2) * 2;
+
         for ($i = 0; $i < $C; $i++)
         {
-            echo "X";
+            echo "<td>X</td>";
         }
-        echo "\n";
+        echo "</tr>";
         for($i = 0; $i < $L ; $i++)
-        {
+        {    echo "<tr>";
             if ($i % 2 == 0)
             {
-                echo "X";
+                echo "<td>X</td>";
                 for ($j = 1; $j < $C - 1; $j++)
                 {
-                    echo " ";
+                    echo "<td> </td>";
                 }
-                echo "X\n";
+                echo "<td>X</td></tr>";
             }
             else
             {
-                echo "X";
+                echo "<tr><td>X</td>";
                 for ($j = 1; $j < $C - 1; $j++)
                 {
-                    echo "X";
+                    echo "<td>X</td>";
                 }
-                echo "X\n";
+                echo "<td>X</td></tr>";
             }
         }
+        echo "<tr>";
         for ($i = 0; $i < $C; $i++)
         {
-            echo " ";
+            echo "<td> </td>";
+
         }
-        echo "\n";
+        echo "</tr>";
     }
     toto(7,14);
     ?>
