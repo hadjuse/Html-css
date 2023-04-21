@@ -1,0 +1,36 @@
+<html>
+<body>
+<div id="div1">
+<h1> XMLHttpRequest Object</h1>
+<button type="button" onclick="loadDoc()">Changer le contenu</button>
+</div>
+<script>
+function loadDoc() {
+var xhttp = new XMLHttpRequest(); xhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200)
+{ document.getElementById("div1").innerHTML = this.responseText; } };
+xhttp.open("GET", "file1.txt", true);
+xhttp.send(); }
+</script>
+</body>
+</html>
+
+<html>
+<body>
+<div id="div1">
+</div>
+<img src="img1.png" width="200" height="200" onmouseover="loadData('img1.txt')"/>
+<img src="img2.png" width="200" height="200" onmouseover="loadData('img2.txt')"/>
+<img src="img3.png" width="200" height="200" onmouseover="loadData('img3.txt')"/>
+<script>
+    function loadData(filename) {
+        var xhr = new XMLHttpRequest(); xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200)
+            { document.getElementById("div1").innerHTML = this.responseText; } };
+            xhr.open("GET", filename, true);
+            xhttp.send(); }
+</script>
+</body>
+</html>
+
+
