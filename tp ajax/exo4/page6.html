@@ -1,0 +1,30 @@
+<html>
+<body>
+
+<div id="demo">
+<h1>The XMLHttpRequest Object</h1>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+    let prix= Math.floor(Number(prompt("Entrez un prix minimal")));
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    var reponse = JSON.parse(xhttp.responseText);
+    var txt="";
+    for( var i in reponse.produits){
+    if (reponse.produits[i].prix>prix){
+         txt=txt+reponse.produits[i].nom;   
+        document.getElementById("demo").innerHTML =txt;
+    }
+    }
+    }
+  };
+  xhttp.open("GET", "page1.json", true);
+  xhttp.send();
+}
+</script>
+</body>
+</html>

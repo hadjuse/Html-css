@@ -1,0 +1,14 @@
+<inventaire>
+<produit code="AZ320">
+ <nom>Ordinateur</nom>
+<prix>750</prix>
+</produit>
+<produit code="LM208">
+<nom>Chaise</nom>
+<prix>63</prix>
+</produit> 
+<produit code="LM209">
+<nom>livre</nom>
+<prix>63</prix>
+</produit> 
+</inventaire>
